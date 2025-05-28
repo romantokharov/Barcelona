@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ФК Барселона</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="players.html">Игроки</a></li>
+          <li><a href="history.html">История</a></li>
+          <li><a href="games.html">Матчи</a></li>
+        </ul>
+      </nav>
+      
+
+    <div class="overlay">
+      <header>
+        <h1><span class="welcome-text">Добро пожаловать в Барселону!</span></h1>
+        <section class="banners-gallery">
+            <h2>Фанатские баннеры и плакаты</h2>
+            <div class="gallery-images">
+              <img src="https://img.championat.com/i/news/77/76/1387017776_b_polskie-bolelshhiki-barselony-vyvesili-na-kamp-nou-ogromnyj-banner.jpg" alt="Фанатский баннер">
+              <img src="https://st2.depositphotos.com/2124563/8893/i/450/depositphotos_88938876-stock-illustration-flag-football-club-barcelona-spain.jpg" alt="Плакат Барселоны">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3HA_iSHvcEpQdNVQPYHGAD5F97U2gRt4yPc2k2Y23_U3Tmi_JGAGXCqlEMn0swdeP7eE&usqp=CAU" alt="Флаг клуба">
+            </div>
+          </section>
+      </header>
+    </div>
+   <script>
+    // Приветствие (печатаем один раз)
+const text = "Добро пожаловать в Барселону!";
+let index = 0;
+
+window.onload = () => {
+  const welcomeEl = document.querySelector(".welcome-text");
+  welcomeEl.textContent = ""; // Очистим перед началом
+  typeEffect(welcomeEl);
+  startSlider();
+};
+
+function typeEffect(el) {
+  if (index < text.length) {
+    el.textContent += text.charAt(index);
+    index++;
+    setTimeout(() => typeEffect(el), 100);
+  }
+}
+
+
+
+   </script>
+</body>
+</html>

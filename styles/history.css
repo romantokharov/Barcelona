@@ -1,0 +1,134 @@
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npN-OfPLuA0i62xvW6dx7uH7H6JAWhkbUQBHpEmJ9QGYRmDVKFAQruuricmW9YkdfKE4odFwBDLxHgIdrKt6cM1tr1ji4LyGMrB1n_9gmCWJZCd2TEr1HR5OfuglOUJrv384qKrYA=s680-w680-h510-rw');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-top: 60px;
+}
+
+/* Навигация */
+.navbar {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-links li a {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FFD700;
+}
+
+.content {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center; /* Важно для центрирования текста */
+}
+
+h1 {
+  font-size: 36px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+               -1px 1px 0 black, 1px 1px 0 black;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+               -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.centered-title {
+  font-size: 24px;
+  margin-top: 40px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+               -1px 1px 0 black, 1px 1px 0 black;
+}
+
+/* Логотипы - выравнивание по центру и перенос при узком экране */
+.logo-history {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.logo-item img {
+  width: 300px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+/* Центрированное видео и уменьшенный размер */
+iframe {
+  display: block;
+  margin: 20px auto;
+  width: 360px;
+  max-width: 90vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+  .centered-title {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .logo-item img {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+  }
+}

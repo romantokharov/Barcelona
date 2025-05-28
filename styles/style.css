@@ -1,0 +1,193 @@
+/* Убираем отступы и задаём фон */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npN-OfPLuA0i62xvW6dx7uH7H6JAWhkbUQBHpEmJ9QGYRmDVKFAQruuricmW9YkdfKE4odFwBDLxHgIdrKt6cM1tr1ji4LyGMrB1n_9gmCWJZCd2TEr1HR5OfuglOUJrv384qKrYA=s680-w680-h510-rw');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Навигация */
+.navbar {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-links li a {
+  font-size: 22px; /* Увеличенный размер шрифта */
+  font-weight: bold;
+  text-decoration: none;
+  color: white; /* Основной цвет текста */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Обводка */
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FFD700; /* Жёлтый при наведении */
+}
+
+
+/* Обводка текста белым с черной тенью */
+.welcome-text {
+  font-size: 3rem;
+  color: white;
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Приветствие */
+.overlay {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.welcome-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+}
+
+  /* Секция галереи баннеров и плакатов */
+  .banners-gallery {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+  }
+  
+  .banners-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+  }
+  
+  .gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .gallery-images img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-images img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Адаптация под планшеты и телефоны */
+@media (max-width: 768px) {
+  .navbar {
+    top: 10%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .welcome-text {
+    font-size: 2.2rem;
+    margin-top: 20px;
+  }
+
+  .banners-gallery {
+    padding: 20px 10px;
+  }
+
+  .banners-gallery h2 {
+    font-size: 1.6rem;
+  }
+
+  .gallery-images {
+    gap: 15px;
+  }
+
+  .gallery-images img {
+    max-width: 90%;
+  }
+}
+
+/* Адаптация под маленькие телефоны */
+@media (max-width: 480px) {
+  .navbar {
+    top: 8%;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .welcome-text {
+    font-size: 1.8rem;
+  }
+
+  .banners-gallery h2 {
+    font-size: 1.4rem;
+  }
+
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-images img {
+    max-width: 95%;
+  }
+}
